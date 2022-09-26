@@ -2,6 +2,8 @@ import streamlit as st
 import streamlit as st
 from streamlit_lottie import st_lottie
 import requests
+import json
+from PIL import Image
 
 st.set_page_config(page_title="mctopherganesh.io", page_icon=":grin:", layout="wide")
 
@@ -16,15 +18,20 @@ def load_lottie_url(url):
     return r.json()
 
 lottie_coding = load_lottie_url("https://assets3.lottiefiles.com/packages/lf20_1cazwtnc.json")
-
+img_prof_pic = Image.open("images/prof_pic.jpeg")
 
 
 # header section
 with st.container():
-    st.subheader("Hello I'm Christopher")
-    st.title("Data Programmer")
-    st.write("I am passionate about using data to improve internal processes, decrease waste, and refine production.")
- 
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.subheader("Hello I'm Christopher")
+        st.title("Data Programmer")
+        st.write("I am passionate about using data to improve internal processes, decrease waste, and refine production.")
+    with right_column:
+        st.image(img_prof_pic)
+
+        
 
 with st.container():
     st.write("---")
@@ -88,3 +95,7 @@ with st.container():
         st.markdown(contact_form, unsafe_allow_html=True)
     with right_column:
         st.empty()
+
+
+
+
