@@ -19,6 +19,7 @@ def load_lottie_url(url):
 
 lottie_coding = load_lottie_url("https://assets3.lottiefiles.com/packages/lf20_1cazwtnc.json")
 img_prof_pic = Image.open("images/prof_pic.jpeg")
+bs_bot_pic = Image.open("images/bs_bot_pic.png")
 
 
 # header section
@@ -64,17 +65,19 @@ with st.container():
     st.write("##")
     image_column, text_column = st.columns((1,2))
     with image_column:
-        # insert image
+        st.image(bs_bot_pic)
         pass
     with text_column:
         st.subheader("Discord Blood Sugar Bot")
         st.write(
             """
-        insert text here
-        
-        
-        """
-        )
+            To keep better track of my personal blood sugar and to learn more about creating 'bots'
+            I made a bot on Discord that I am able to send information to that commits to a PostgreSQL data
+            base and returns dynamic data visualizations with various commands.
+
+
+            """)
+        st.markdown("[See it in action](https://www.youtube.com/watch?v=K2dynB2y1sg)")
 
 with st.container():
     st.write("---")
