@@ -27,7 +27,7 @@ with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
         st.subheader("Hello I'm Christopher")
-        st.title("Data Programmer")
+        st.title("A Data Programmer")
         st.write("I am passionate about using data to improve internal processes, decrease waste, and refine production.")
     with right_column:
         st.image(img_prof_pic)
@@ -85,7 +85,7 @@ with st.container():
     st.write("##")
 
     contact_form = """
-    <form action="https://formsubmit.co/mctopherganesh.com" method="POST">
+    <form action="https://formsubmit.co/mctopherganesh@gmail.com" method="POST">
      <input type="hidden" name="_captacha" value="false">   
      <input type="text" name="name" placeholder="Your name" required>
      <input type="email" name="email" placeholder="Your email" required>
